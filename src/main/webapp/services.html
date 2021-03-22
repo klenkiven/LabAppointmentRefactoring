@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		<title>创新实验室-服务</title>
+		<!-- Loading third party fonts -->
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--[if lt IE 9]>
+        <script src="js/ie-support/html5.js"></script>
+        <script src="js/ie-support/respond.js"></script><![endif]-->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+
+	<body>
+		
+		<div id="site-content">
+			
+			<header class="site-header">
+				<div class="top-header">
+					<div class="container">
+						<a href="tel:+8611111111111">地址:行勉楼A2实验室</a>
+						<nav class="member-navigation pull-right">
+							<a href="#"><i class="fa fa-user"></i> 注册</a>
+							<a href="#"><i class="fa fa-lock"></i> 登录</a>
+						</nav> <!-- .member-navigation -->
+					</div> <!-- .container -->
+				</div> <!-- .top-header -->
+
+				<div class="bottom-header">
+					<div class="container">
+						<a href="index.html" class="branding pull-left">
+							<h1 class="site-title">创新<span>实验室</span></h1>
+							<hr>
+							<h2 class="site-description">Innovate Lab</h2>
+						</a> <!-- #branding -->
+						
+						<nav class="main-navigation pull-right">
+							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item"><a href="services.html">服务</a></li>
+<!--								<li class="menu-item"><a href="about-us.html">关于</a></li>-->
+<!--								<li class="menu-item"><a href="contact.html">加入我们</a></li>-->
+							</ul>
+						</nav> <!-- .main-navigation -->
+					</div> <!-- .container -->
+				</div> <!-- .bottom-header -->
+			</header> <!-- .site-header -->
+
+			<main class="content">
+				<div class="breadcrumbs">
+					<div class="container">
+						<a href="index.html">主页</a> &rarr;
+						<a href="#">服务</a>
+					</div>
+				</div>
+
+				<div class="page-content">
+					<div class="fullwidth-block card-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 col-xs-6 col-us">
+								<div class="card-table wow fadeInLeft" data-wow-delay=".3s">
+									<div class="card-title" onclick="window.location='appointment.html'">
+										<h2 class="card-type"><i class="fa fa-calendar-check-o"></i> 实验室预约</h2>
+									</div>
+									<div class="card-tag">
+										<small>测试运行中</small>
+									</div>
+								</div> <!-- .card-table -->
+							</div>
+							<div class="col-md-3 col-xs-6 col-us">
+								<div class="card-table wow fadeInLeft" data-wow-delay=".3s">
+									<div class="card-title">
+										<h2 class="card-type"><i class="fa fa-print"></i> 共享打印机</h2>
+									</div>
+									<div class="card-tag">
+										<small>仅供内部使用</small>
+									</div>
+								</div> <!-- .card-table -->
+							</div>
+							<div class="col-md-3 col-xs-6 col-us">
+								<div class="card-table wow fadeInLeft" data-wow-delay=".3s">
+									<div class="card-title">
+										<h2 class="card-type"><i class="fa fa-check-circle-o"></i> 签到与签退</h2>
+									</div>
+									<div class="card-tag">
+										<small>即将上线</small>
+									</div>
+								</div> <!-- .card-table -->
+							</div>
+							<div class="col-md-3 col-xs-6 col-us">
+								<div class="card-table wow fadeInLeft" data-wow-delay=".3s">
+									<div class="card-title">
+										<h2 class="card-type"><i class="fa fa-book"></i> 图书管理</h2>
+									</div>
+									<div class="card-tag">
+										<small>暂未开发</small>
+									</div>
+								</div> <!-- .card-table -->
+							</div>
+						</div> <!-- .row -->
+						<div class="row">
+							<br><br><br><br><br><br><br><br><br><br><br>
+						</div>
+					</div> <!-- .container -->
+				</div> <!-- .card-section -->
+					
+				</div> <!-- .inner-content -->
+			</main> <!-- .content -->
+
+			<footer class="site-footer wow fadeInUp">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-6">
+							
+							<div class=" branding">
+								<h1 class="site-title"><a href="#">创新<span>实验室</span></a></h1> 
+								<h2 class="site-description">Innovate Lab</h2>
+							</div> <!-- .branding -->
+
+							<p class="copy">地址:太原理工大学明向校区 行勉楼A2实验室</p>
+						</div>
+						
+						<div class="col-md-6 align-right">
+
+							<nav class="footer-navigation">
+<!--								<a href="about-us.html">关于</a>-->
+								<a href="services.html">服务</a>
+<!--								<a href="contact.html">加入我们</a>-->
+							</nav> <!-- .footer-navigation -->
+
+							<div class="social-links">
+								<a href="#" class="facebook"><i class="fa fa-weibo"></i></a>
+								<a href="#" class="twitter"><i class="fa fa-qq"></i></a>
+								<a href="#" class="google-plus"><i class="fa fa-weixin"></i></a>
+							</div> <!-- .social-links -->
+						</div>
+					</div>
+				</div>
+			</footer> <!-- .site-footer -->
+			<script>
+				function flushCardsColor(){
+					let cards=document.getElementsByClassName("card-title");
+					let i=0;
+					let append=360/cards.length;
+					for(let card of cards){
+						card.style.backgroundColor='hsl('+i+',50%,50%)';
+						i+=append;
+					}
+				}
+				$(document).ready(function(){
+					flushCardsColor();
+				});
+			</script>
+		</div> <!-- #site-content -->
+	</body>
+</html>

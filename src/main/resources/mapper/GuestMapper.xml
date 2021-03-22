@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.tyut.selaba2.management.appointment.mapper.GuestMapper">
+    <resultMap id="guestMapper" type="Guest">
+        <id     property="id"               column="id" />
+        <result property="createTime"       column="create_time" />
+        <result property="lastModifiedTime" column="last_modified_time" />
+        <result property="guestId"          column="guest_id"/>
+        <result property="name"             column="guest_name"/>
+        <result property="phoneNum"         column="guest_phone_number"/>
+    </resultMap>
+
+    <!-- 检索所有的访客信息 -->
+    <!-- TODO 这里可以尝试使用分页处理，然后可以检索信息，暂时这样，以后再说 -->
+    <select id="selectAllGuestsList" resultMap="guestMapper">
+        select id, create_time, last_modified_time, guest_id, guest_name, guest_phone_number
+        from guest_info
+    </select>
+
+    <!-- 根据访客ID检索访客信息 -->
+    <select id="selectGuestByID" resultMap="guestMapper" parameterType="java.lang.Long">
+        select id, create_time, last_modified_time, guest_id, guest_name, guest_phone_number
+        from guest_info
+        where guest_id = #{guestId}
+    </select>
+
+    <!-- 根据访客的电话号码检索访客信息 -->
+    <select id="selectGuestByPhoneNum" resultMap="guestMapper" parameterType="java.lang.Long">
+        select id, create_time, last_modified_time, guest_id, guest_name, guest_phone_number
+        from guest_info
+        where guest_phone_number = #{phoneNum}
+    </select>
+
+    <!-- 更新访客的信息 -->
+    <update id="updateGuest" parameterType="Guest">
+        update guest_info
+        <set>
+            last_modified_time = CURRENT_TIMESTAMP,
+            <if test="name != null and name != ''">guest_name = #{name}, </if>
+            <if test="phoneNum != null and phoneNum != 0">guest_phone_num = #{phoneNum}</if>
+        </set>
+        where guest_id = #{guestId}
+    </update>
+
+    <!-- 删除特定访客根据访客ID -->
+    <delete id="deleteGuestByID" parameterType="java.lang.Long" >
+        delete from guest_info where guest_id = #{guestId}
+    </delete>
+
+    <!-- 新增访客 -->
+    <insert id="insertGuest" parameterType="Guest">
+        insert into guest_info (
+            guest_id,
+            guest_name,
+            guest_phone_number
+        )
+            VALUE (
+                   #{guestId},
+                   #{name},
+                   #{phoneNum}
+            )
+    </insert>
+</mapper>
